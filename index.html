@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACFL | America's Competitive Football League</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#111827;
+    border-bottom:1px solid #333;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff7b00;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff7b00;
+}
+
+.hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#cfcfcf;
+    max-width:700px;
+    font-size:20px;
+    line-height:1.6;
+}
+
+.button{
+    margin-top:40px;
+    background:#ff7b00;
+    color:white;
+    text-decoration:none;
+    padding:15px 40px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#ff9d3b;
+    transform:scale(1.05);
+}
+
+.cards{
+    width:90%;
+    max-width:1200px;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#161b22;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #30363d;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff7b00;
+}
+
+.card h2{
+    margin-bottom:20px;
+    color:#ff7b00;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    margin:12px 0;
+}
+
+.score{
+    font-size:28px;
+    text-align:center;
+    line-height:2;
+}
+
+.score span{
+    display:block;
+    font-size:42px;
+    color:#ff7b00;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#888;
+    border-top:1px solid #333;
+    margin-top:50px;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">🏈 ACFL</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Standings</a>
+        <a href="#">Schedule</a>
+        <a href="#">Teams</a>
+        <a href="#">Players</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>America's Competitive Football League</h1>
+
+    <p>
+        The most competitive football league. Follow every game, player, and championship.
+    </p>
+
+    <a href="#" class="button">View Schedule</a>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h2>🏆 League Standings</h2>
+
+        <ul>
+            <li>1. Wolves (7-1)</li>
+            <li>2. Titans (6-2)</li>
+            <li>3. Hawks (5-3)</li>
+            <li>4. Sharks (4-4)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>🔥 Game of the Week</h2>
+
+        <div class="score">
+            Wolves
+            <span>24 - 17</span>
+            Titans
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>⭐ MVP Race</h2>
+
+        <p>1. Ethan Smith</p>
+        <p>2. Mason Carter</p>
+        <p>3. Jayden Brooks</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 ACFL • All Rights Reserved
+</footer>
+
+</body>
+</html>
