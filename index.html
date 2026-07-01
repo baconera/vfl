@@ -6,18 +6,18 @@
 <title>ACFL | America's Competitive Football League</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
     background:#0d1117;
     color:white;
 }
 
+/* NAVBAR */
 header{
     display:flex;
     justify-content:space-between;
@@ -25,6 +25,8 @@ header{
     padding:20px 60px;
     background:#111827;
     border-bottom:1px solid #333;
+    position:sticky;
+    top:0;
 }
 
 .logo{
@@ -36,7 +38,7 @@ header{
 nav a{
     color:white;
     text-decoration:none;
-    margin-left:30px;
+    margin-left:25px;
     transition:.3s;
 }
 
@@ -44,8 +46,9 @@ nav a:hover{
     color:#ff7b00;
 }
 
+/* HERO */
 .hero{
-    height:80vh;
+    height:85vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -67,7 +70,7 @@ nav a:hover{
 }
 
 .button{
-    margin-top:40px;
+    margin-top:35px;
     background:#ff7b00;
     color:white;
     text-decoration:none;
@@ -78,58 +81,58 @@ nav a:hover{
 }
 
 .button:hover{
-    background:#ff9d3b;
     transform:scale(1.05);
+    background:#ff9d3b;
 }
 
-.cards{
-    width:90%;
-    max-width:1200px;
+/* STANDINGS */
+.standings{
+    max-width:1000px;
     margin:60px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-.card{
+    padding:25px;
     background:#161b22;
-    padding:30px;
     border-radius:18px;
     border:1px solid #30363d;
-    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#ff7b00;
-}
-
-.card h2{
-    margin-bottom:20px;
-    color:#ff7b00;
-}
-
-.card ul{
-    list-style:none;
-}
-
-.card li{
-    margin:12px 0;
-}
-
-.score{
-    font-size:28px;
+.standings h2{
     text-align:center;
-    line-height:2;
-}
-
-.score span{
-    display:block;
-    font-size:42px;
+    margin-bottom:25px;
     color:#ff7b00;
-    font-weight:bold;
+    font-size:36px;
 }
 
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#ff7b00;
+    color:white;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #30363d;
+}
+
+tr:nth-child(even){
+    background:#1d232b;
+}
+
+tr:hover{
+    background:#252c36;
+}
+
+.rank{
+    font-weight:bold;
+    color:#ff7b00;
+}
+
+/* FOOTER */
 footer{
     text-align:center;
     padding:40px;
@@ -140,6 +143,7 @@ footer{
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -147,58 +151,102 @@ footer{
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">Standings</a>
+        <a href="#standings">Standings</a>
         <a href="#">Schedule</a>
         <a href="#">Teams</a>
         <a href="#">Players</a>
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <h1>America's Competitive Football League</h1>
 
     <p>
-        The most competitive football league. Follow every game, player, and championship.
+        The most competitive football league. Follow every game, team, and championship race.
     </p>
 
-    <a href="#" class="button">View Schedule</a>
+    <a href="#standings" class="button">View Standings</a>
 </section>
 
-<section class="cards">
+<!-- STANDINGS -->
+<section id="standings" class="standings">
 
-    <div class="card">
-        <h2>🏆 League Standings</h2>
+<h2>🏆 League Standings</h2>
 
-        <ul>
-            <li>1. Wolves (7-1)</li>
-            <li>2. Titans (6-2)</li>
-            <li>3. Hawks (5-3)</li>
-            <li>4. Sharks (4-4)</li>
-        </ul>
-    </div>
+<table>
 
-    <div class="card">
-        <h2>🔥 Game of the Week</h2>
+<tr>
+<th>Rank</th>
+<th>Team</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Win %</th>
+</tr>
 
-        <div class="score">
-            Wolves
-            <span>24 - 17</span>
-            Titans
-        </div>
-    </div>
+<tr>
+<td class="rank">1</td>
+<td>Wolves</td>
+<td>7</td>
+<td>1</td>
+<td>.875</td>
+</tr>
 
-    <div class="card">
-        <h2>⭐ MVP Race</h2>
+<tr>
+<td class="rank">2</td>
+<td>Titans</td>
+<td>6</td>
+<td>2</td>
+<td>.750</td>
+</tr>
 
-        <p>1. Ethan Smith</p>
-        <p>2. Mason Carter</p>
-        <p>3. Jayden Brooks</p>
-    </div>
+<tr>
+<td class="rank">3</td>
+<td>Hawks</td>
+<td>5</td>
+<td>3</td>
+<td>.625</td>
+</tr>
+
+<tr>
+<td class="rank">4</td>
+<td>Sharks</td>
+<td>4</td>
+<td>4</td>
+<td>.500</td>
+</tr>
+
+<tr>
+<td class="rank">5</td>
+<td>Lions</td>
+<td>3</td>
+<td>5</td>
+<td>.375</td>
+</tr>
+
+<tr>
+<td class="rank">6</td>
+<td>Bulls</td>
+<td>2</td>
+<td>6</td>
+<td>.250</td>
+</tr>
+
+<tr>
+<td class="rank">7</td>
+<td>Panthers</td>
+<td>1</td>
+<td>7</td>
+<td>.125</td>
+</tr>
+
+</table>
 
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 ACFL • All Rights Reserved
+© 2026 ACFL • All Rights Reserved
 </footer>
 
 </body>
